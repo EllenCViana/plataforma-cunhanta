@@ -7,6 +7,10 @@ export const LoginContainer = styled.div`
   align-items: center;
   height: 100vh;
   background-color: #f4f4f9;
+
+  @media (min-width: 360px) {
+    margin: 0 1rem;
+  }
 `;
 
 export const LoginForm = styled.form`
@@ -74,4 +78,13 @@ export const LinkButton = styled(Link)`
   &:hover {
     text-decoration: underline;
   }
+`;
+
+export const SuccessMessage = styled.div`
+  color: green;
+  font-size: 1rem;
+  background-color:rgb(210, 255, 225);
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.5rem;
+
 `;

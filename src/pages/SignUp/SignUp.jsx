@@ -9,6 +9,8 @@ import {
   SuccessMessage,
   LinkButton,
 } from "./SignUp.styles";
+import { getAuth, createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import app from "../../firebaseConfig"; 
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +21,8 @@ const Signup = () => {
   });
   const [errors, setErrors] = useState({});
   const [success, setSuccess] = useState(false);
+
+  const auth = getAuth(app);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -41,15 +45,27 @@ const Signup = () => {
     return newErrors;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
     } else {
-      setSuccess(true);
-      console.log("Usuário cadastrado:", formData);
-      setFormData({ name: "", email: "", password: "", confirmPassword: "" });
+      try {
+        const userCredential = await createUserWithEmailAndPassword(
+          auth,
+          formData.email,
+          formData.password
+        );
+        await updateProfile(userCredential.user, { displayName: formData.name });
+
+        setSuccess(true);
+        console.log("Usuário cadastrado:", userCredential.user);
+        setFormData({ name: "", email: "", password: "", confirmPassword: "" });
+      } catch (error) {
+        console.error("Erro ao criar usuário:", error.message);
+        setErrors({ email: "O e-mail já está em uso ou inválido." });
+      }
     }
   };
 

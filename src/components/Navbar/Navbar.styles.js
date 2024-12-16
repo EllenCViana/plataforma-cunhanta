@@ -44,24 +44,41 @@ export const Logo = styled.div`
   }
 `;
 
-export const NavLinks = styled.ul`
-  list-style: none;
-  padding: 0;
+export const DivNav = styled.div`
+display: flex;
+
+  @media (max-width: 360px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    }
+`
+export const NavLinks = styled.div`
   display: flex;
+  align-items: center;
+  list-style: none;
+  width: 64%;
+  justify-content: space-between;
 
   @media (max-width: 768px) {
     display: ${(props) => (props.$isOpen ? "flex" : "none")};
     flex-direction: column;
     width: 100%;
-    height: 10rem;
+    height: auto;
     position: fixed;
     background-color: #fff;
     top: 4rem;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     left: 0;
     box-shadow: 0 0.5rem 1rem rgba(53, 54, 53, 0.5);
+    padding: 1rem 0;
     z-index: 1;
+  }
+  
+  @media (max-width: 360px) {
+    list-style: none;
+
   }
 `;
 
@@ -96,19 +113,6 @@ export const NavItem = styled.li`
   }
 `;
 
-export const ButtonContainer = styled.div`
-  display: ${(props) => (props.$isOpen ? "flex" : "none")};
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-top: 1rem;
-
-  @media (min-width: 768px) {
-    display: flex;
-    flex-direction: row;
-    margin-top: 0;
-  }
-`;
-
 export const Button = styled.button`
   background: ${(props) => (props.className === "btn" ? "#fff" : "#4f1c59")};
   border: 0.0625rem solid ${(props) => (props.className === "btn" ? "#4f1c59" : "transparent")};
@@ -117,6 +121,8 @@ export const Button = styled.button`
   font-size: 0.875rem;
   border-radius: 0.3125rem;
   cursor: pointer;
+  width: ${(props) => (props.$isOpen ? "80%" : "auto")};
+  text-align: center;
 
   &:hover {
     background-color: ${(props) => (props.className === "btn" ? "#f8f8f8" : "#5b2668")};
@@ -124,6 +130,23 @@ export const Button = styled.button`
 
   @media (max-width: 768px) {
     font-size: 1rem;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 1rem;
+    padding: 1rem 0rem;
+    width: 10rem;
+
+  }
+`;
+
+export const ButtonUser = styled(Button)`
+  font-weight: bold;
+  background-color: transparent;
+  color: #000;
+
+  &:hover {
+    background-color: transparent;
   }
 `;
 

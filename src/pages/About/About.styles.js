@@ -53,7 +53,7 @@ export const Card = styled.div`
 
 export const HighlightsSection = styled.section`
   padding: 3.125rem 0;
-  background: #f4f4f4;
+  background: #fff;
   text-align: center;
 `;
 

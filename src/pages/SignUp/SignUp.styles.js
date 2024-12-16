@@ -7,6 +7,10 @@ export const SignupContainer = styled.div`
   align-items: center;
   min-height: 100vh;
   background: #f8f9fa;
+
+  @media (min-width: 360px) {
+    margin: 0 1rem;
+  }
 `;
 
 export const SignupForm = styled.form`

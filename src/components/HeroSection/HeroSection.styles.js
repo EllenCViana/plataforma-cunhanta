@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const HeroHome = styled.section`
   display: flex;
   align-items: center;
-  height: 31rem;
+  height: 34rem;
   background: 
     linear-gradient(rgba(0, 0, 0, 0.074), rgba(0, 0, 0, 0.800)),
     url('/images/hero2.jpg');

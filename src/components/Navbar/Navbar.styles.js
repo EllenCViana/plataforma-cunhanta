@@ -11,16 +11,26 @@ export const NavbarContainer = styled.header`
   width: 100%;
   border-bottom: 0.125rem solid #ececec;
   top: 0;
+  z-index: 1000;
+
+  @media (max-width: 1024px) {
+    padding: 1rem 1.25rem;
+  }
 
   @media (max-width: 768px) {
     height: 4rem;
+    padding: 0.8rem 1rem;
+  }
+
+  @media (max-width: 480px) {
+
+    height: auto;
+    align-items: flex-start;
   }
 
   @media (max-width: 360px) {
-    justify-content: space-between;
-    z-index: 1;
+    padding: 0.6rem 0.8rem;
   }
-
 `;
 
 export const Logo = styled.div`
@@ -33,32 +43,54 @@ export const Logo = styled.div`
     color: #4f1c59;
     margin: 0;
 
+    @media (max-width: 1024px) {
+      font-size: 1.2rem;
+    }
+
     @media (max-width: 768px) {
       font-size: 1rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.9rem;
     }
   }
 
   img {
     height: 2.125rem;
     margin-right: 0.75rem;
+
+    @media (max-width: 768px) {
+      height: 1.75rem;
+    }
+
+    @media (max-width: 480px) {
+      height: 1.5rem;
+    }
   }
 `;
 
 export const DivNav = styled.div`
-display: flex;
+  display: flex;
+  align-items: center;
 
-  @media (max-width: 360px) {
-    display: flex;
+  @media (max-width: 480px) {
     flex-direction: column;
     gap: 1rem;
-    }
-`
+    width: 100%;
+  }
+`;
+
 export const NavLinks = styled.div`
   display: flex;
   align-items: center;
   list-style: none;
   width: 64%;
   justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    width: 70%;
+  }
 
   @media (max-width: 768px) {
     display: ${(props) => (props.$isOpen ? "flex" : "none")};
@@ -68,22 +100,19 @@ export const NavLinks = styled.div`
     position: fixed;
     background-color: #fff;
     top: 4rem;
-    justify-content: flex-start;
-    align-items: center;
     left: 0;
     box-shadow: 0 0.5rem 1rem rgba(53, 54, 53, 0.5);
     padding: 1rem 0;
     z-index: 1;
   }
-  
-  @media (max-width: 360px) {
-    list-style: none;
 
+  @media (max-width: 480px) {
+    padding: 0.5rem 0;
   }
 `;
 
 export const NavItem = styled.li`
-  margin: 0 1.5rem;
+  margin: 0 1.2rem;
   text-align: center;
 
   a {
@@ -111,6 +140,14 @@ export const NavItem = styled.li`
     width: 100%;
     background-color: #5b2668;
   }
+
+  @media (max-width: 1024px) {
+    margin: 0 1rem;
+  }
+
+  @media (max-width: 768px) {
+    margin: 0.5rem 0;
+  }
 `;
 
 export const Button = styled.button`
@@ -128,15 +165,24 @@ export const Button = styled.button`
     background-color: ${(props) => (props.className === "btn" ? "#f8f8f8" : "#5b2668")};
   }
 
+  @media (max-width: 1024px) {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.9rem;
+  }
+
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  @media (max-width: 480px) {
+    width: 10rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.75rem;
   }
 
   @media (max-width: 360px) {
-    font-size: 1rem;
-    padding: 1rem 0rem;
-    width: 10rem;
-
+    padding: 0.4rem 0.8rem;
   }
 `;
 
@@ -155,17 +201,31 @@ export const HamburgerIcon = styled.div`
   cursor: pointer;
   flex-direction: column;
   justify-content: space-between;
-  height: 1.4rem;
+  height: 2rem;
   width: 2rem;
 
   span {
-    background-color:rgb(89, 89, 89);
+    background-color: rgb(89, 89, 89);
     height: 0.25rem;
     width: 100%;
     border-radius: 5px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: flex;
+  }
+
+  @media (max-width: 768px) {
+    height: 1.2rem;
+    width: 1.8rem;
+  }
+
+  @media (max-width: 480px) {
+    height: 1.5rem;
+    width: 1.8rem;
+  }
+  @media (max-width: 360px) {
+    height: 1.2rem;
+    width: 1.4rem;
   }
 `;

@@ -1,4 +1,5 @@
 import { HeroHome, HeroText, HeroButton } from "./HeroSection.styles";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -9,7 +10,7 @@ const HeroSection = () => {
           <p>
             Descubra cursos interativos, criados para preservar a cultura e impulsionar o desenvolvimento das comunidades quilombolas.
           </p>
-          <HeroButton href="/categories">Explore os Cursos</HeroButton>
+          <HeroButton as={Link} to="/categories">Explore os Cursos</HeroButton>
         </HeroText>
       </div>
     </HeroHome>

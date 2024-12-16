@@ -24,7 +24,7 @@ export const Sidebar = styled.div`
     width: 100vw;
     max-width: 100vw;
     height: 9rem;
-    margin-top: 4rem;
+    margin-top: 3.2rem;
     top: 0;
     box-shadow: none;
     padding: 0.938rem;
@@ -38,13 +38,18 @@ export const Sidebar = styled.div`
     border-bottom: 1px solid #ddd;
     scroll-behavior: none;
   }
+
+  @media (max-width: 360px) {
+    padding: 0.5rem;
+    height: auto;
+  }
 `;
 
 export const SearchContainer = styled.div`
   margin-bottom: 20px;
 
   @media (max-width: 1024px) {
-  width: 100%;
+    width: 100%;
   }
 `;
 
@@ -55,6 +60,10 @@ export const SearchInput = styled.input`
   border: 1px solid #ddd;
   border-radius: 5px;
   margin-bottom: 0.2rem;
+
+  @media (max-width: 360px) {
+    font-size: 0.875rem;
+  }
 `;
 
 export const SelectContainer = styled.div`
@@ -64,6 +73,11 @@ export const SelectContainer = styled.div`
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ddd;
+
+    @media (max-width: 360px) {
+      font-size: 0.875rem;
+      height: 35px;
+    }
   }
 `;
 
@@ -74,6 +88,10 @@ export const FilterContainer = styled.div`
     margin-bottom: 0.5rem;
     font-size: 1rem;
     font-weight: bold;
+
+    @media (max-width: 768px) {
+      font-size: 0.875rem;
+    }
   }
 `;
 
@@ -91,6 +109,16 @@ export const FilterButton = styled.button`
   &:hover {
     background-color: ${(props) => (props.active ? "#4E1B5A" : "#4E1B5A")};
   }
+
+  @media (max-width: 768px) {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
+
+  @media (max-width: 360px) {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
 `;
 
 export const MainContent = styled.div`
@@ -101,13 +129,18 @@ export const MainContent = styled.div`
   padding-top: 1.5rem; 
 
   @media (max-width: 1024px) {
-  padding-top: 2rem; 
+    padding-top: 2rem; 
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0;
+    padding: 1rem;
   }
 
   @media (max-width: 360px) {
     margin: auto;
-    max-width: 100vh; 
-    padding-top: 4rem; 
+    padding-top: 4rem;
   }
 `;
 
@@ -128,6 +161,10 @@ export const SectionTitle = styled.h2`
 
   @media (max-width: 768px) {
     font-size: 1.5rem;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 1.25rem;
   }
 `;
 
@@ -151,21 +188,19 @@ export const CategoryCard = styled.div`
   margin: 1rem;
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
+    width: 14rem;
+    padding: 0.8rem;
   }
 
   @media (max-width: 480px) {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    gap: 1rem;
+    width: 100%;
+    padding: 0.5rem;
   }
 
   @media (max-width: 360px) {
     margin: auto;
-    max-width: 100vh; 
+    max-width: 90%;
   }
-
 `;
 
 export const CategoryImage = styled.img`
@@ -175,6 +210,14 @@ export const CategoryImage = styled.img`
   object-fit: cover;
   border-radius: 4px;
   margin-bottom: 1rem;
+
+  @media (max-width: 768px) {
+    height: 7rem;
+  }
+
+  @media (max-width: 480px) {
+    height: 6rem;
+  }
 `;
 
 export const CategoryTitle = styled.h3`
@@ -225,6 +268,15 @@ export const VideoLink = styled.a`
     background-color: #5b2668;
     text-decoration: none;
   }
+
+  @media (max-width: 768px) {
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 0.75rem;
+  }
 `;
 
 export const NoItemsMessage = styled.div`
@@ -232,4 +284,12 @@ export const NoItemsMessage = styled.div`
   color: #353635;
   margin-top: 20px;
   text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 12px;
+  }
 `;

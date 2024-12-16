@@ -146,7 +146,7 @@ export const NavItem = styled.li`
   }
 
   @media (max-width: 768px) {
-    margin: 0.5rem 0;
+    margin: 0 1.2rem;
   }
 `;
 

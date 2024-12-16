@@ -134,13 +134,17 @@ export const MainContent = styled.div`
 
   @media (max-width: 768px) {
     width: 100%;
-    margin-left: 0;
+    max-width: 100%;
     padding: 1rem;
+    margin-left: 0; 
   }
 
   @media (max-width: 360px) {
-    margin: auto;
     padding-top: 4rem;
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    margin-left: 0; 
   }
 `;
 

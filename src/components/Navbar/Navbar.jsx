@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import {
   NavbarContainer,
   Logo,
@@ -17,8 +17,9 @@ const Navbar = () => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [user, setUser] = useState(null);
-
   const auth = getAuth(app);
+
+  const navbarRef = useRef(null); // Ref para identificar cliques fora da navbar
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -32,14 +33,30 @@ const Navbar = () => {
     return () => unsubscribe();
   }, [auth]);
 
+  // Fecha o menu ao clicar fora
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (navbarRef.current && !navbarRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, []);
+
   const handleLogout = async () => {
     await signOut(auth);
     setUser(null);
     navigate("/home");
   };
 
+  const handleNavItemClick = () => {
+    setIsMenuOpen(false); // Fecha o menu ao clicar em um item
+  };
+
   return (
-    <NavbarContainer>
+    <NavbarContainer ref={navbarRef}>
       <Logo>
         <img src="/images/education.png" alt="Logo Cunhantã" />
         <h1>Cunhantã++</h1>
@@ -51,22 +68,22 @@ const Navbar = () => {
       </HamburgerIcon>
       <NavLinks $isOpen={isMenuOpen}>
         <DivNav>
-          <NavItem>
+          <NavItem onClick={handleNavItemClick}>
             <NavLink to="/home" className={({ isActive }) => (isActive ? "active" : "")}>
               Início
             </NavLink>
           </NavItem>
-          <NavItem>
+          <NavItem onClick={handleNavItemClick}>
             <NavLink to="/categories" className={({ isActive }) => (isActive ? "active" : "")}>
               Categorias
             </NavLink>
           </NavItem>
-          <NavItem>
+          <NavItem onClick={handleNavItemClick}>
             <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}>
               Sobre
             </NavLink>
           </NavItem>
-          <NavItem>
+          <NavItem onClick={handleNavItemClick}>
             <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>
               Contato
             </NavLink>
@@ -74,17 +91,17 @@ const Navbar = () => {
         </DivNav>
         {!user ? (
           <>
-          <DivNav>
-            <NavItem>
-              <Button $isOpen={isMenuOpen} onClick={() => navigate("/signup")}>
-                Inscreva-se
-              </Button>
-            </NavItem>
-            <NavItem>
-              <Button $isOpen={isMenuOpen} className="btn-solid" onClick={() => navigate("/signin")}>
-                Entrar
-              </Button>
-            </NavItem>
+            <DivNav>
+              <NavItem onClick={handleNavItemClick}>
+                <Button $isOpen={isMenuOpen} onClick={() => navigate("/signup")}>
+                  Inscreva-se
+                </Button>
+              </NavItem>
+              <NavItem onClick={handleNavItemClick}>
+                <Button $isOpen={isMenuOpen} className="btn-solid" onClick={() => navigate("/signin")}>
+                  Entrar
+                </Button>
+              </NavItem>
             </DivNav>
           </>
         ) : (

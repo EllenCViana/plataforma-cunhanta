@@ -14,6 +14,13 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
+  @media (max-width: 1024px) {
+    width: 90%;
+  }
+
+  @media (max-width: 768px) {
+    width: 95%;
+  }
 `;
 
 export const Title = styled.h2`
@@ -21,8 +28,20 @@ export const Title = styled.h2`
   margin-bottom: 1.25rem;
   color: #353635;
 
+  @media (max-width: 1024px) {
+    font-size: 1.8rem;
+  }
+
   @media (max-width: 768px) {
     font-size: 1.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 1.2rem;
   }
 `;
 
@@ -38,11 +57,21 @@ export const Paragraph = styled.p`
   margin: 0 auto;
   color: #353635;
 
+  @media (max-width: 1024px) {
+    font-size: 1.1rem;
+  }
+
   @media (max-width: 768px) {
     font-size: 1rem;
   }
 
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
 
+  @media (max-width: 360px) {
+    font-size: 0.8rem;
+  }
 `;
 
 export const AreasSection = styled.section`
@@ -59,14 +88,22 @@ export const AreaGrid = styled.div`
   margin-top: 1.25rem;
   max-width: 100%;
 
+  @media (max-width: 1024px) {
+    gap: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    gap: 1.2rem;
+  }
+
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   @media (max-width: 360px) {
-    gap: 1.3rem;
+    gap: 0.8rem;
   }
-
 `;
 
 export const AreaCard = styled.div`
@@ -82,8 +119,21 @@ export const AreaCard = styled.div`
     line-height: 1.5;
     text-align: justify;
     color: #353635;
+
+    @media (max-width: 1024px) {
+      font-size: 0.95rem;
+    }
+
     @media (max-width: 768px) {
       font-size: 0.9rem;
+    }
+
+    @media (max-width: 480px) {
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 360px) {
+      font-size: 0.8rem;
     }
   }
 `;
@@ -93,8 +143,20 @@ export const TitleCard = styled.h3`
   color: #353635;
   margin-bottom: 0.625rem;
 
+  @media (max-width: 1024px) {
+    font-size: 1.1rem;
+  }
+
   @media (max-width: 768px) {
     font-size: 1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 0.8rem;
   }
 `;
 
@@ -112,8 +174,20 @@ export const FAQQuestion = styled.h4`
   color: #353635;
   margin-bottom: 0.3125rem;
 
+  @media (max-width: 1024px) {
+    font-size: 1.2rem;
+  }
+
   @media (max-width: 768px) {
     font-size: 1.1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 0.9rem;
   }
 `;
 
@@ -122,7 +196,19 @@ export const FAQAnswer = styled.p`
   color: #353635;
   margin-top: 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.95rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 0.85rem;
   }
 `;

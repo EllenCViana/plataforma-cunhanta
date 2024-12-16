@@ -9,6 +9,22 @@ export const HeroSection = styled.section`
   align-items: center;
   text-align: center;
   margin-top: 5rem;
+
+  @media (max-width: 1024px) {
+      font-size: 2rem;
+    }
+
+    @media (max-width: 768px) {
+      margin-top: 4rem;
+    }
+
+    @media (max-width: 480px) {
+      margin-top: 2rem;
+    }
+
+  @media (max-width: 360px) {
+    margin-top: 2.5rem;
+  }
 `;
 
 export const HeroTitle = styled.h1`
@@ -90,10 +106,11 @@ export const TeamGrid = styled.div`
 export const TeamMember = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center; 
-  justify-content: center;
   width: 30%;
-  height: 25rem;
+  height: 30rem;
+align-items: center;
+
+
   
   @media (max-width: 360px) {
     width: 43%;
@@ -108,10 +125,19 @@ export const TeamImage = styled.img`
   border: 3px solid #4F1C59;
   margin-bottom: 0.625rem;
   object-fit: cover;
-  @media (max-width: 360px) {
-    width: 7rem;
-    height: 7rem;
-  }
+
+  @media (max-width: 768px) {
+      height: 7rem;
+      width: 7rem;
+    }
+
+    @media (max-width: 480px) {
+      /* height: 6rem; */
+    }
+
+    @media (max-width: 360px) {
+      /* height: 6rem; */
+    }
 `;
 
 

@@ -23,6 +23,18 @@ export const ContactContainer = styled.div`
     margin-top: 8rem;
   }
 
+  @media (max-width: 768px) {
+    width: 80%;
+    max-width: 80%;
+    margin-top: 8rem;
+    }
+
+    @media (max-width: 480px) {
+    width: 90%;
+    max-width: 90%;
+    margin-top: 5rem;
+    }
+
   @media (max-width: 360px) {
     width: 90%;
     max-width: 90%;

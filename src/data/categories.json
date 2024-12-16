@@ -1,0 +1,163 @@
+{
+  "categories": [
+    {
+      "title": "Redação",
+      "description": "Cursos preparatórios para Redação",
+      "subcategories": [
+        {
+          "categoria": "Dissertação",
+          "items": [
+
+            {
+              "image": "/education1.png",
+              "title": "Redação Dissertação - Não sei fazer redação | Como aprender fácil",
+              "description": "Aprenda de forma prática como começar a fazer redações mesmo sem experiência.",
+              "videoUrl": "https://www.youtube.com/watch?v=kAPvKKZKEIQ"
+            },
+            {
+              "image": "/education1.png",
+              "title": "Redação Dissertação - Como começar uma redação sobre qualquer tema",
+              "description": "Aprenda de maneira simples como escrever uma boa introdução para sua redação.",
+              "videoUrl": "https://www.youtube.com/watch?v=vJ_6qtvHCUg"
+            },
+            {
+              "image": "/education1.png",
+              "title": "Redação Dissertação - Passo a passo para uma redação EXCELENTE",
+              "description": "Aprenda a criar uma redação de qualidade, abordando desde a introdução até a conclusão.",
+              "videoUrl": "https://www.youtube.com/watch?v=a37ocYYTSJU"
+            },
+            {
+              "image": "/education1.png",
+              "title": "Redação Dissertação - Melhores palavras para usar na redação",
+              "description": "Aprenda a escolher termos adequados para melhorar a clareza, a coesão e o impacto do texto.",
+              "videoUrl": "https://www.youtube.com/watch?v=ptZ5jmibkUk"
+            },
+            {
+              "image": "/education1.png",
+              "title": "Redação Dissertação - Os 5 ERROS que as pessoas mais cometem na REDAÇÃO",
+              "description": "Saiba quais os erros mais comuns que comprometem a qualidade de uma redação",
+              "videoUrl": "https://www.youtube.com/watch?v=RmQ2YKm-CpA"
+            },
+            {
+              "image": "/education1.png",
+              "title": "Redação Dissertação - Os melhores CONECTIVOS para usar na redação",
+              "description": "Aprenda a usar os conectivos de forma eficaz para melhorar a fluidez e a coesão do seu texto.",
+              "videoUrl": "https://www.youtube.com/watch?v=xuIkJ8SULrE"
+            },
+            {
+              "image": "/education1.png",
+              "title": "Redação Dissertação - Como usar a vírgula na REDAÇÃO? Fácil e Prático",
+              "description": "Aprenda de maneira simples e direta as regras básicas do uso da vírgula.",
+              "videoUrl": "https://www.youtube.com/watch?v=1tVB0fSXrns"
+            },
+            {
+              "image": "/education1.png",
+              "title": "Redação Dissertação - O que é uma redação dissertativa argumentativa?",
+              "description": "Aprenda sobre o formato da redação dissertativa argumentativa, que é comum em vestibulares e concursos.",
+              "videoUrl": "https://www.youtube.com/watch?v=Ai_Zy6u84c8"
+            },
+            {
+              "image": "/education1.png",
+              "title": "Redação Dissertação - Quando usar o hífen com prefixos",
+              "description": "Saiba quando é necessário usar o hífen e quando não é, e escreva de acordo com as normas atuais da língua portuguesa.",
+              "videoUrl": "https://www.youtube.com/watch?v=mBId_ca9KrA"
+            },
+            {
+              "image": "/education1.png",
+              "title": "Redação Dissertação - Redação - como fazer a estrutura, modelo pronto - Parte 1",
+              "description": "Aprenda o passo a passo para criar uma redação bem organizada, abordando a introdução, desenvolvimento e conclusão.",
+              "videoUrl": "https://www.youtube.com/watch?v=dQUfpQOoUxs"
+            },
+            {
+              "image": "/education1.png",
+              "title": "Redação Dissertação - Como fazer conclusão",
+              "description": "Receba dicas sobre como encerrar o texto de maneira impactante e coerente.",
+              "videoUrl": "https://www.youtube.com/watch?v=3uRUv5dZC5s"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Desenvolvimento Web Front-End",
+      "description": "Cursos de frontend",
+      "subcategories": [
+        {
+          "categoria": "Html5/Css3",
+          "items": [
+            {
+              "image": "/education1.png",
+              "title": "Html5/Css3 - Curso completo e atual de HTML5 e CSS3",
+              "description": "O Curso de HTML5 e CSS3 vai te ensinar a criar sites usando HTML e CSS.",
+              "videoUrl": "https://www.youtube.com/watch?v=Ejkb_YpuHWs&list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n"
+            },
+            {
+              "image": "/education1.png",
+              "title": "Html5/Css3 - Curso completo de HTML - seu PRIMEIRO SITE DO ZERO para iniciar em PROGRAMAÇÃO!",
+              "description": "Nesse curso vamos aprender do zero como utilizar HTML para iniciar no universo de programação.",
+              "videoUrl": "https://www.youtube.com/watch?v=Fhy-5CtVkiM"
+            }
+          ]
+        },
+        {
+          "categoria": "Javascript/Typescript",
+          "items": [
+            {
+              "image": "/education1.png",
+              "title": "Javascript/Typescript - Curso em Video JavaScript Gustavo Guanabara",
+              "description": "Assista a este Curso de JavaScript para Iniciantes.",
+              "videoUrl": "https://www.youtube.com/watch?v=Ptbk2af68e8&list=PLeuwJul7tRBfsm7sxnR5_7wG3KvaQ6oOt"
+            },
+            {
+              "image": "/education1.png",
+              "title": "Javascript/Typescript - Zero to Hero",
+              "description": "Sejam bem-vindos e bem-vindas ao Curso de TypeScript - Zero to Hero!",
+              "videoUrl": "https://www.youtube.com/watch?v=u7K1sdnCv5Y&list=PLb2HQ45KP0Wsk-p_0c6ImqBAEFEY-LU9H"
+            }
+          ]
+        }
+      ]
+    },
+    
+    {
+      "title": "Informática",
+      "description": "Cursos de informatica basica",
+      "subcategories": [
+        {
+          "categoria": "Básica",
+          "items": [
+            {
+              "image": "/education1.png",
+              "title": "Informática Básica - Curso de Informática Básica",
+              "description": "Aprenda Informática Básica do absoluto zero",
+              "videoUrl": "https://www.youtube.com/watch?v=9fNHAD7ZDL4&list=PL-QAz5R5Rlm7wn20xLTIr84gbS2XkzqEZ"
+            },
+            {
+              "image": "/education1.png",
+              "title": "Informática Básica - Curso Básico de Informática para iniciantes",
+              "description": "Aprenda como ligar o computador, como funciona o Windows e o essencial para usar o computador de forma correta..",
+              "videoUrl": "https://www.youtube.com/watch?v=Mbkrr_vhE4Q&list=PLLxuMgPheaZrhbU-3qQs3CsaBXRq-pfEE"
+            }
+          ]
+        },
+        {
+          "categoria": "Avançada",
+          "items": [
+            {
+              "image": "/education1.png",
+              "title": "Informática Avançada - Curso de Word Avançado",
+              "description": "Aprenda Técnicas avançadas de Word.",
+              "videoUrl": "https://www.youtube.com/watch?v=t1cNDZHD7sU&list=PLp3K5e6WbnKS6eQxBG02iHztxQ0GiMO-b"
+            },
+            {
+              "image": "/education1.png",
+              "title": "Informática Avançada - Curso de Excel Avançado",
+              "description": "Aprenda Técnicas avançadas de Excel.",
+              "videoUrl": "https://www.youtube.com/watch?v=OCShH-8cAUQ&list=PL-QAz5R5Rlm4IWX_sDPOwumEhh90-B61N"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

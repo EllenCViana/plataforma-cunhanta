@@ -16,32 +16,28 @@ export const Sidebar = styled.div`
   width: 20%;
   max-width: 20%;
 
+
   @media (max-width: 1024px) {
+    width: 30%;
+    max-width: 30%;
     max-height: 100%;
+    margin-top: -1rem;
   }
 
   @media (max-width: 768px) {
-    width: 100vw;
-    max-width: 100vw;
+    width: 100%;
+    max-width: 100%;
     height: 9rem;
-    margin-top: 3.2rem;
-    top: 0;
-    box-shadow: none;
-    padding: 0.938rem;
+    margin-top: -1rem;
   }
 
   @media (max-width: 480px) {
-    width: 100%;
-    box-shadow: none;
-    padding: 0.938rem;
-    height: auto;
-    border-bottom: 1px solid #ddd;
-    scroll-behavior: none;
+    margin-top: -2rem;
   }
 
   @media (max-width: 360px) {
-    padding: 0.5rem;
-    height: auto;
+    margin-top: -2.5rem;
+    height: 8.5rem;
   }
 `;
 
@@ -130,30 +126,37 @@ export const MainContent = styled.div`
 
   @media (max-width: 1024px) {
     padding-top: 2rem; 
+    width: 70%;
+  max-width: 70%;
+  height: 100%;
+  margin-left: 30%; 
+    
   }
 
   @media (max-width: 768px) {
     width: 100%;
     max-width: 100%;
-    padding: 1rem;
     margin-left: 0; 
+    padding-top: 10rem; 
+  }
+
+  @media (max-width: 480px) {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0; 
+    padding-top: 9rem; 
   }
 
   @media (max-width: 360px) {
-    padding-top: 4rem;
+    padding-top: 3rem;
     width: 100%;
     max-width: 100%;
-    padding: 1rem;
     margin-left: 0; 
   }
 `;
 
 export const Section = styled.section`
   margin-bottom: 2.5rem;
-
-  @media (max-width: 480px) {
-    margin-top: 5rem;
-  }
 `;
 
 export const SectionTitle = styled.h2`
@@ -176,7 +179,7 @@ export const Div = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 1rem;
+  gap: 0.2rem;
 `;
 
 export const CategoryCard = styled.div`
@@ -186,42 +189,40 @@ export const CategoryCard = styled.div`
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 1rem;
+  padding: 2rem;
   text-align: center;
-  width: 16rem;
+  width: 18rem;
   margin: 1rem;
+  border: 1px solid #cdcdcd;
 
   @media (max-width: 768px) {
-    width: 14rem;
-    padding: 0.8rem;
+    width: 50%;
   }
 
   @media (max-width: 480px) {
-    width: 100%;
-    padding: 0.5rem;
+    width: 50%;
+
   }
 
   @media (max-width: 360px) {
-    margin: auto;
-    max-width: 90%;
+    width: 60%;
   }
 `;
 
 export const CategoryImage = styled.img`
-  width: 100%;
-  max-width: 100%;
-  height: 9rem;
-  object-fit: cover;
+  width: 55%;
+  max-width: 55%;
   border-radius: 4px;
+  margin: auto;
   margin-bottom: 1rem;
 
-  @media (max-width: 768px) {
+  /* @media (max-width: 768px) {
     height: 7rem;
   }
 
   @media (max-width: 480px) {
     height: 6rem;
-  }
+  } */
 `;
 
 export const CategoryTitle = styled.h3`

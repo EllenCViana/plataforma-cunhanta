@@ -47,24 +47,33 @@ export const MissionSection = styled.section`
 
 export const SectionTitle = styled.h2`
   font-size: 2rem;
-  margin-bottom: 1.875rem;
+  margin-bottom: 2rem;
 `;
 
 export const Grid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.25rem;
+  gap: 3rem;
 `;
 
 export const Card = styled.div`
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
+  padding: 1.5rem;
   text-align: center;
+
+  h3 {
+    margin-bottom: 0.3rem;
+  }
   ul {
     list-style-type: none
   }
+`;
+
+export const Image = styled.img`
+    width: 25%;
+    margin: auto;
+    margin-bottom: 1rem;
 `;
 
 export const HighlightsSection = styled.section`
@@ -122,8 +131,8 @@ export const TeamImage = styled.img`
   width: 9.375rem;
   height: 9.375rem;
   border-radius: 50%;
-  border: 3px solid #4F1C59;
-  margin-bottom: 0.625rem;
+  border:  2px solid #96CC3A;
+  margin-bottom: 1.5rem;
   object-fit: cover;
 
   @media (max-width: 768px) {
@@ -131,13 +140,6 @@ export const TeamImage = styled.img`
       width: 7rem;
     }
 
-    @media (max-width: 480px) {
-      /* height: 6rem; */
-    }
-
-    @media (max-width: 360px) {
-      /* height: 6rem; */
-    }
 `;
 
 

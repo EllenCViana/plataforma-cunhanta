@@ -24,7 +24,7 @@ export const Container = styled.div`
 `;
 
 export const Title = styled.h2`
-  font-size: 2rem;
+  font-size: 1.6rem;
   margin-bottom: 1.25rem;
   color: #353635;
 
@@ -51,10 +51,8 @@ export const AboutSection = styled.section`
 `;
 
 export const Paragraph = styled.p`
-  font-size: 1.2rem;
-  line-height: 1.6;
-  max-width: 50rem;
-  margin: 0 auto;
+  font-size: 1.1rem;
+  margin: auto;
   color: #353635;
 
   @media (max-width: 1024px) {
@@ -88,6 +86,14 @@ export const AreaGrid = styled.div`
   margin-top: 1.25rem;
   max-width: 100%;
 
+  @media (max-width: 480px) {
+    max-width: 70%;
+  }
+
+  @media (max-width: 360px) {
+    max-width: 80%;
+  }
+
   @media (max-width: 1024px) {
     gap: 1.5rem;
   }
@@ -109,39 +115,26 @@ export const AreaGrid = styled.div`
 export const AreaCard = styled.div`
   background-color: #fff;
   border-radius: 0.625rem;
-  padding: 1.5rem;
+  padding: 1.2rem 1.6rem;
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-  p {
-    font-size: 1rem;
-    margin-top: 0.625rem;
-    line-height: 1.5;
-    text-align: justify;
-    color: #353635;
-
-    @media (max-width: 1024px) {
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 768px) {
-      font-size: 0.9rem;
-    }
-
-    @media (max-width: 480px) {
-      font-size: 0.85rem;
-    }
-
-    @media (max-width: 360px) {
-      font-size: 0.8rem;
-    }
-  }
+  display: flex;
+  flex-direction: column;
 `;
 
-export const TitleCard = styled.h3`
-  font-size: 1.2rem;
+export const DivArea = styled.div`
+display: flex;
+align-items: center;
+margin-bottom: 0.8rem;
+`;
+
+export const AreaImage = styled.img`
+    width: 25%;
+`;
+
+export const TitleArea = styled.h3`
+  font-size: 1.1rem;
+  width: 75%;
   color: #353635;
-  margin-bottom: 0.625rem;
 
   @media (max-width: 1024px) {
     font-size: 1.1rem;
@@ -160,55 +153,110 @@ export const TitleCard = styled.h3`
   }
 `;
 
+export const ParagraphArea = styled.p`
+  font-size: 1rem;
+  text-align: justify;
+  color: #353635;
+  font-size: 1rem;
+
+  @media (max-width: 1024px) {
+    font-size: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 0.8rem;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 0.7rem;
+  }
+`;
+
 export const FAQSection = styled.section`
   padding: 3.125rem 0;
   background-color: #fff;
 `;
 
-export const FAQItem = styled.div`
-  margin-bottom: 1.25rem;
-`;
-
-export const FAQQuestion = styled.h4`
-  font-size: 1.3rem;
-  color: #353635;
-  margin-bottom: 0.3125rem;
-
-  @media (max-width: 1024px) {
-    font-size: 1.2rem;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 1.1rem;
-  }
+export const Accordion = styled.div`
+  &[data-accordion='collapse'] {
+    background-color: #fff;
+    width: 85%;
+  max-width: 85%;
+  margin: 0 auto;
+  background-color: #fff;
 
   @media (max-width: 480px) {
-    font-size: 1rem;
+    max-width: 70%;
   }
 
-  @media (max-width: 360px) {
-    font-size: 0.9rem;
   }
 `;
 
-export const FAQAnswer = styled.p`
-  font-size: 1.1rem;
+export const AccordionHeading = styled.h2`
+  margin: 0;
+
+`;
+
+export const AccordionButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.25rem;
   color: #353635;
-  margin-top: 0;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: left;
+  border: 1px solid rgb(216, 216, 216);
+  border-bottom: 0;
+  border-radius: 0.3rem 0.3rem;
+  transition: background-color 0.2s ease-in-out;
+  background-color: #fff;
 
-  @media (max-width: 1024px) {
-    font-size: 1rem;
+  span {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* #4f1c59 */
+  &:hover {
+    background-color:rgb(254, 250, 255);
   }
 
-  @media (max-width: 768px) {
-    font-size: 0.95rem;
+  &:focus {
+    outline: none;
   }
 
-  @media (max-width: 480px) {
-    font-size: 0.9rem;
+  svg {
+    width: 1rem;
+    height: 1rem;
+    transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'rotate(0deg)')};
+    transition: transform 0.2s ease-in-out; 
+    flex-shrink: 0;
+  }
+`;
+
+export const AccordionBody = styled.div`
+  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
+  padding: 1.25rem;
+  border: 1px solid rgb(216, 216, 216);
+  margin-bottom: 0.2rem;
+
+  p {
+    margin-bottom: 0.5rem;
+    color: #333;
   }
 
-  @media (max-width: 360px) {
-    font-size: 0.85rem;
+  a {
+    color: #333; 
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 `;

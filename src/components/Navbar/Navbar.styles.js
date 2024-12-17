@@ -23,7 +23,6 @@ export const NavbarContainer = styled.header`
   }
 
   @media (max-width: 480px) {
-
     height: auto;
     align-items: flex-start;
   }
@@ -74,7 +73,23 @@ export const DivNav = styled.div`
   display: flex;
   align-items: center;
 
-  @media (max-width: 480px) {
+  @media (max-width: 1024px) {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+    }
+
+    @media (max-width: 480px) {
+      flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    }
+
+  @media (max-width: 360px) {
     flex-direction: column;
     gap: 1rem;
     width: 100%;
@@ -99,7 +114,7 @@ export const NavLinks = styled.div`
     height: auto;
     position: fixed;
     background-color: #fff;
-    top: 4rem;
+    margin-top: 24rem;
     left: 0;
     box-shadow: 0 0.5rem 1rem rgba(53, 54, 53, 0.5);
     padding: 1rem 0;
@@ -107,7 +122,11 @@ export const NavLinks = styled.div`
   }
 
   @media (max-width: 480px) {
-    padding: 0.5rem 0;
+    margin-top: 2.3rem;
+  }
+
+  @media (max-width: 360px) {
+    margin-top: 2.1rem;
   }
 `;
 
@@ -142,12 +161,16 @@ export const NavItem = styled.li`
   }
 
   @media (max-width: 1024px) {
-    margin: 0 1rem;
+    font-size: 1rem;
   }
 
   @media (max-width: 768px) {
-    margin: 0 1.2rem;
+    font-size: 1rem;
   }
+
+  /* @media (max-width: 768px) {
+    margin: 0 1.2rem;
+  } */
 `;
 
 export const Button = styled.button`
@@ -166,19 +189,27 @@ export const Button = styled.button`
   }
 
   @media (max-width: 1024px) {
-    font-size: 0.85rem;
-    padding: 0.6rem 0.9rem;
+    font-size: 0.8rem;
+    width: 7rem;
+    padding: 0.6rem 0;
+    display: flex;
+    justify-content: center;
   }
 
   @media (max-width: 768px) {
     font-size: 0.8rem;
-    padding: 0.5rem 0.8rem;
+    width: 15rem;
+    padding: 0.6rem 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
   }
 
   @media (max-width: 480px) {
     width: 10rem;
     padding: 0.5rem 1rem;
-    font-size: 0.75rem;
+    font-size: 1rem;
+    margin-top: 1rem;
   }
 
   @media (max-width: 360px) {
@@ -211,13 +242,10 @@ export const HamburgerIcon = styled.div`
     border-radius: 5px;
   }
 
-  @media (max-width: 1024px) {
-    display: flex;
-  }
-
   @media (max-width: 768px) {
-    height: 1.2rem;
-    width: 1.8rem;
+    display: flex;
+    height: 1.4rem;
+    width: 2rem;
   }
 
   @media (max-width: 480px) {

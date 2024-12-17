@@ -115,7 +115,7 @@ function Categories() {
               Todos
             </FilterButton>
 
-            {selectedCategory === "Redação" && (
+            {/* {selectedCategory === "Redação" && (
               <>
                 <FilterButton
                   active={selectedFilter === "Dissertação"}
@@ -124,7 +124,7 @@ function Categories() {
                   Dissertação
                 </FilterButton>
               </>
-            )}
+            )} */}
 
             {selectedCategory === "Desenvolvimento Web Front-End" && (
               <>

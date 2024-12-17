@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
-import Home from "./pages/Home/Home";
-import Categories from "./pages/Categories/Categories";
-import About from "./pages/About/About";
-import Contact from "./pages/Contact/Contact";
-import SignUp from "./pages/SignUp/SignUp";
-import SignIn from "./pages/SignIn/SignIn";
-import { VideoPlayer } from "./pages/VideoPlayer/VideoPlayer";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Categories from "./pages/Categories";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import SignUp from "./pages/SignUp";
+import SignIn from "./pages/SignIn";
+import { VideoPlayer } from "./pages/VideoPlayer";
 import { StyleSheetManager } from "styled-components";
 import isPropValid from "@emotion/is-prop-valid";
 

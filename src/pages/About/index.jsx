@@ -12,6 +12,7 @@ import {
   TeamGrid,
   TeamMember,
   TeamImage,
+  Image
 } from "./About.styles";
 
 function About() {
@@ -31,7 +32,8 @@ function About() {
         <div className="container">
           <SectionTitle>Missão, Visão e Valores</SectionTitle>
           <Grid>
-            <Card>
+            <Card  style={{ border: '1px solid #cdcdcd' }}>
+            <Image src="/images/mission.png" alt="mission" />
               <h3>Missão</h3>
               <p>
                 Oferecer educação acessível e culturalmente relevante para
@@ -39,14 +41,16 @@ function About() {
                 aprendizado coletivo.
               </p>
             </Card>
-            <Card>
+            <Card  style={{ border: '1px solid #cdcdcd' }}>
+            <Image src="/images/vision.png" alt="vision" />
               <h3>Visão</h3>
               <p>
                 Ser a principal plataforma de educação quilombola no Brasil,
                 reconhecida pela qualidade e impacto positivo nas comunidades.
               </p>
             </Card>
-            <Card>
+            <Card  style={{ border: '1px solid #cdcdcd' }}>
+            <Image src="/images/values.png" alt="values" />
               <h3>Valores</h3>
               <ul>
                 <li>Respeito às raízes culturais</li>
@@ -63,24 +67,24 @@ function About() {
         <div className="container">
           <SectionTitle>Por Que Escolher o Cunhantã++?</SectionTitle>
           <Grid>
-            <HighlightCard>
-              <img src="/images/webinar.png" alt="Acessibilidade" />
+            <HighlightCard style={{ border: '2px solid #7B71FF', boxShadow: '0 0.25rem 0.75rem rgba(122, 113, 255, 0.4)' }}>
+              <Image src="/images/webinar.png" alt="acessibilidade" />
               <h3>Acessibilidade</h3>
               <p>
                 Plataforma otimizada para comunidades rurais com acesso limitado
                 à internet.
               </p>
             </HighlightCard>
-            <HighlightCard>
-              <img src="/images/connection.png" alt="Conexão Comunitária" />
+            <HighlightCard style={{ border: '2px solid #68CCF9', boxShadow: '0 0.25rem 0.75rem rgba(104, 203, 249, 0.4)' }}>
+              <Image src="/images/connection.png" alt="conexao comunitaria" />
               <h3>Conexão Comunitária</h3>
               <p>
                 Conteúdos criados por e para as comunidades quilombolas, com
                 foco em suas necessidades.
               </p>
             </HighlightCard>
-            <HighlightCard>
-              <img src="/images/futuro-digital.png" alt="Tradição e Inovação" />
+            <HighlightCard style={{ border: '2px solid #DC6EBE', boxShadow: '0 0.25rem 0.75rem rgba(220, 110, 191, 0.4)' }}>
+              <Image src="/images/futuro-digital.png" alt="tradicao e inovacao" />
               <h3>Tradição e Inovação</h3>
               <p>
                 Preservamos o patrimônio cultural enquanto promovemos o futuro

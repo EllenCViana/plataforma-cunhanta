@@ -2,13 +2,10 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   CategoriesContainer,
-  Sidebar,
-  SearchContainer,
   SearchInput,
   SelectContainer,
   FilterContainer,
   FilterButton,
-  MainContent,
   Section,
   SectionTitle,
   CategoryCard,
@@ -18,6 +15,7 @@ import {
   VideoLink,
   Div,
   NoItemsMessage,
+  DivSearchVideo
 } from "./Categories.styles";
 
 import categoriesData from "../../data/categories.json";
@@ -37,7 +35,6 @@ function Categories() {
   useEffect(() => {
     let itemsToFilter = [];
 
-    // Filtra as categorias e itens
     if (selectedCategory) {
       const selectedCategoryData = categories.find(
         (category) => category.title === selectedCategory
@@ -48,13 +45,11 @@ function Categories() {
         );
       }
     } else {
-      // Se nenhuma categoria foi selecionada, mostrar todos os itens
       itemsToFilter = categories.flatMap((category) =>
         category.subcategories.flatMap((subcategory) => subcategory.items)
       );
     }
 
-    // Filtra pelo título se houver filtro
     if (selectedFilter !== "Todos") {
       itemsToFilter = itemsToFilter.filter((item) =>
         item.title.toLowerCase().includes(selectedFilter.toLowerCase())
@@ -66,7 +61,7 @@ function Categories() {
 
   const handleCategoryChange = (e) => {
     setSelectedCategory(e.target.value);
-    setSelectedFilter("Todos"); // Resetar filtro quando mudar a categoria
+    setSelectedFilter("Todos");
   };
 
   const handleFilterChange = (filter) => {
@@ -84,26 +79,24 @@ function Categories() {
 
   return (
     <CategoriesContainer>
-      <Sidebar>
-        <SearchContainer>
-          <SearchInput
-            type="text"
-            placeholder="O que você está buscando?"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-        </SearchContainer>
-
-        <SelectContainer>
-          <select onChange={handleCategoryChange} value={selectedCategory}>
-            <option value="">Todas as Categorias</option>
-            {categories.map((category) => (
-              <option key={category.title} value={category.title}>
-                {category.title}
-              </option>
-            ))}
-          </select>
-        </SelectContainer>
+          <DivSearchVideo>
+            <SearchInput
+              type="text"
+              placeholder="Pesquise por um curso..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+                    <SelectContainer>
+            <select onChange={handleCategoryChange} value={selectedCategory}>
+              <option value="">Todas as Categorias</option>
+              {categories.map((category) => (
+                <option key={category.title} value={category.title}>
+                  {category.title}
+                </option>
+              ))}
+            </select>
+                    </SelectContainer>
+          </DivSearchVideo>
 
         {selectedCategory && (
           <FilterContainer>
@@ -114,17 +107,6 @@ function Categories() {
             >
               Todos
             </FilterButton>
-
-            {/* {selectedCategory === "Redação" && (
-              <>
-                <FilterButton
-                  active={selectedFilter === "Dissertação"}
-                  onClick={() => handleFilterChange("Dissertação")}
-                >
-                  Dissertação
-                </FilterButton>
-              </>
-            )} */}
 
             {selectedCategory === "Desenvolvimento Web Front-End" && (
               <>
@@ -163,9 +145,7 @@ function Categories() {
             )}
           </FilterContainer>
         )}
-      </Sidebar>
 
-      <MainContent>
         <Section>
           {selectedCategory && <SectionTitle>{selectedCategory}</SectionTitle>}
           <Div>
@@ -191,7 +171,6 @@ function Categories() {
             )}
           </Div>
         </Section>
-      </MainContent>
     </CategoriesContainer>
   );
 }

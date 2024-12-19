@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Main = styled.main`
-  background-color: #f4f4f4;
   width: 100%;
   max-width: 100%;
 `;

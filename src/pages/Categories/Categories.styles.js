@@ -31,6 +31,10 @@ export const SearchInput = styled.input`
   border-radius: 5px;
   width: 78%;
 
+  @media (max-width: 480px) {
+    width: 60%;
+  }
+
   @media (max-width: 360px) {
     font-size: 0.875rem;
   }
@@ -45,6 +49,10 @@ width: 20%;
     padding: 0.8rem;
     border-radius: 5px;
     border: 1px solid #ddd;
+  }
+
+  @media (max-width: 480px) {
+    width: 36%;
   }
 `;
 
@@ -81,6 +89,10 @@ export const FilterButton = styled.button`
 export const Section = styled.section`
   margin-top: 2rem;
   margin-bottom: 2.5rem;
+
+  @media (max-width: 480px) {
+    margin-top: 1rem;
+  }
 `;
 
 export const SectionTitle = styled.h2`
@@ -129,7 +141,7 @@ export const CategoryCard = styled.div`
   }
 
   @media (max-width: 480px) {
-    width: 50%;
+    width: 100%;
 
   }
 
@@ -140,10 +152,15 @@ export const CategoryCard = styled.div`
 
 export const CategoryImage = styled.img`
   width: 55%;
-  max-width: 55%;
   border-radius: 4px;
   margin: auto;
   margin-bottom: 1rem;
+
+  @media (max-width: 480px) {
+    font-size: 0.875rem;
+    width: 52%;
+    margin-bottom: 1.8rem;
+  }
 `;
 
 export const CategoryTitle = styled.h3`
@@ -159,6 +176,11 @@ export const CategoryTitle = styled.h3`
 
   @media (max-width: 768px) {
     font-size: 0.875rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
   }
 
   @media (max-width: 360px) {
@@ -181,6 +203,10 @@ export const CategoryDescription = styled.p`
 
   @media (max-width: 768px) {
     font-size: 0.75rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
   }
 
   @media (max-width: 360px) {

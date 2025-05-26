@@ -44,32 +44,7 @@ export const Title = styled.h2`
   }
 `;
 
-export const AboutSection = styled.section`
-  padding: 3.75rem 0;
-  background-color: #fff;
-`;
 
-export const Paragraph = styled.p`
-  font-size: 1.1rem;
-  margin: auto;
-  color: #353635;
-
-  @media (max-width: 1024px) {
-    font-size: 1.1rem;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 0.9rem;
-  }
-
-  @media (max-width: 360px) {
-    font-size: 0.8rem;
-  }
-`;
 
 export const AreasSection = styled.section`
   background-color: #fff;
@@ -81,7 +56,7 @@ export const AreaGrid = styled.div`
   display: grid;
   margin: auto;
   grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  gap: 1.875rem;
+  gap: 24px;
   margin-top: 1.25rem;
   max-width: 100%;
 
@@ -114,25 +89,22 @@ export const AreaGrid = styled.div`
 export const AreaCard = styled.div`
   background-color: #fff;
   border-radius: 0.625rem;
-  padding: 1.2rem 1.6rem;
-  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.1);
+  width: 290px;
+  padding: 24px;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-`;
-
-export const DivArea = styled.div`
-display: flex;
-align-items: center;
-margin-bottom: 0.8rem;
-`;
-
-export const AreaImage = styled.img`
-    width: 25%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+transition: transform 0.3s ease;
+&:hover {
+transform: translateY(-10px);
+}
 `;
 
 export const TitleArea = styled.h3`
-  font-size: 1.1rem;
-  width: 75%;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
   color: #353635;
 
   @media (max-width: 1024px) {
@@ -221,7 +193,6 @@ export const AccordionButton = styled.button`
     color: #333;
   }
   
-  /* #4f1c59 */
   &:hover {
     background-color:rgb(254, 250, 255);
   }

@@ -96,9 +96,9 @@ export const Input = styled.input`
   margin-bottom: 0.75rem;
 
   &:focus {
-    border-color: #4F1C59;
+    border-color: #E61D3F;
     outline: none;
-    box-shadow: 0 0 0.3125rem #5B2668;
+    box-shadow: 0 0 0.3125rem #E61D3F;
   }
 `;
 
@@ -111,16 +111,16 @@ export const TextArea = styled.textarea`
   margin-bottom: 1.5rem;
 
   &:focus {
-    border-color: #4F1C59;
+    border-color: #E61D3F;
     outline: none;
-    box-shadow: 0 0 0.3125rem #5B2668;
+    box-shadow: 0 0 0.3125rem #E61D3F;
   }
 `;
 
 export const SubmitButton = styled.button`
   padding: 0.75rem;
   font-size: 1rem;
-  background-color: #4F1C59;
+  background-color: #E61D3F;
   color: #fff;
   border: none;
   border-radius: 0.375rem;
@@ -128,7 +128,7 @@ export const SubmitButton = styled.button`
   transition: 0.3s ease;
 
   &:hover {
-    background-color: #5B2668;
+    background-color: #E61D3F;
   }
 `;
 
@@ -153,7 +153,7 @@ export const InfoItem = styled.p`
   margin: 0.3125rem 0;
 
   a {
-    color: #4F1C59;
+    color: #E61D3F;
     text-decoration: none;
 
     &:hover {

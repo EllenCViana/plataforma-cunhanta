@@ -4,15 +4,11 @@ import {
   Main,
   Container,
   Title,
-  AboutSection,
-  Paragraph,
   AreasSection,
   AreaGrid,
   AreaCard,
   TitleArea,
   FAQSection,
-  AreaImage,
-  DivArea,
   ParagraphArea,
   Accordion,
   AccordionHeading,
@@ -20,6 +16,7 @@ import {
   AccordionBody
 } from "./Home.styles";
 import Footer from "../../components/Footer";
+import CourseCardSection from '../../components/Cursos';
 
 const Home = () => {
   const [openAccordion, setOpenAccordion] = useState(null);
@@ -37,102 +34,88 @@ const Home = () => {
         link="#courses"
       />
 
-      <AboutSection id="about">
-        <Container>
-          <Title>Sobre Nós</Title>
-          <Paragraph>
-            Somos uma plataforma dedicada a oferecer educação acessível e gratuita para comunidades quilombolas, com o objetivo de preservar suas tradições e impulsionar o aprendizado coletivo.
-          </Paragraph>
-        </Container>
-      </AboutSection>
+      <Container>
+      <CourseCardSection />
+      </Container>
 
       <AreasSection id="areas">
         <Container>
           <Title>Áreas de Especialização</Title>
           <AreaGrid>
-            <AreaCard style={{ border: '2px solid #F68829' }}>
-              <DivArea>
-                <AreaImage src="/images/frontend.png" alt="frontend" />
-                <TitleArea style={{ color: '#F68829' }}>Front-End</TitleArea>
-              </DivArea>
+            <AreaCard>
+                <TitleArea>Alfabetização Digital</TitleArea>
               <ParagraphArea>
-                Aprenda a criar interfaces de usuário incríveis, focando em HTML, CSS, JavaScript e frameworks como React.
+              Aprenda os conceitos básicos de tecnologia, como usar o computador e navegar com segurança na internet.
               </ParagraphArea>
             </AreaCard>
 
-            <AreaCard style={{ border: '2px solid #7B71FF' }}>
-              <DivArea>
-                <AreaImage src="/images/empreendedorismoquilombola.png" alt="empreendedorismo" />
-                <TitleArea style={{ color: '#7B71FF' }}>Empreendedorismo Quilombola</TitleArea>
-              </DivArea>
+            <AreaCard>
+                <TitleArea>Uso Básico de Computadores</TitleArea>
               <ParagraphArea>
-                Desenvolva habilidades para iniciar e gerenciar negócios locais que valorizem a cultura quilombola e promovam o desenvolvimento econômico.
+              Descubra como organizar arquivos, instalar programas e realizar tarefas essenciais no computador.
               </ParagraphArea>
             </AreaCard>
 
-            <AreaCard style={{ border: '2px solid #00C46D' }}>
-              <DivArea>
-                <AreaImage src="/images/programacao.png" alt="backend" />
-                <TitleArea style={{ color: '#00C46D' }}>Back-End</TitleArea>
-              </DivArea>
+            <AreaCard>
+                <TitleArea>Internet e Redes Sociais</TitleArea>
               <ParagraphArea>
-                Desenvolva a lógica do lado do servidor, com foco em bancos de dados, APIs, e frameworks como Node.js.
+              Aprenda a navegar na internet, criar contas em redes sociais e se comunicar com segurança online.
               </ParagraphArea>
             </AreaCard>
 
-            <AreaCard style={{ border: '2px solid #F16165' }}>
-              <DivArea>
-                <AreaImage src="/images/fullstack.png" alt="fullstack" />
-                <TitleArea style={{ color: '#F16165' }}>Full-Stack</TitleArea>
-              </DivArea>
+            <AreaCard>
+                <TitleArea>Ferramentas de Escritório</TitleArea>
               <ParagraphArea>
-                Torne-se um desenvolvedor completo, dominando tanto a parte front-end quanto back-end.
+              Desenvolva habilidades com Word, Excel e PowerPoint para impulsionar sua produtividade.
               </ParagraphArea>
             </AreaCard>
 
-            <AreaCard style={{ border: '2px solid #96CC3A' }}>
-              <DivArea>
-                <AreaImage src="/images/negocios.png" alt="gestao" />
-                <TitleArea style={{ color: '#96CC3A' }}>Gestão de Cooperativas</TitleArea>
-              </DivArea>
+            <AreaCard>
+                <TitleArea>Comunicação Digital</TitleArea>
               <ParagraphArea>
-                Aprenda a organizar e administrar cooperativas, fortalecendo a economia coletiva e sustentável em comunidades quilombolas.
+              Aprenda a enviar e-mails, fazer videochamadas e se comunicar de forma clara no ambiente digital.
               </ParagraphArea>
             </AreaCard>
 
-            <AreaCard style={{ border: '2px solid #DC6EBE' }}>
-              <DivArea>
-                <AreaImage src="/images/design.png" alt="design" />
-                <TitleArea style={{ color: '#DC6EBE' }}>Design</TitleArea>
-              </DivArea>
+            <AreaCard>
+                <TitleArea>Criação de Conteúdo Digital</TitleArea>
               <ParagraphArea>
-                Aprofunde-se no design de interfaces e experiência do usuário, criando produtos digitais intuitivos.
+              Descubra como criar posts, banners e vídeos para redes sociais utilizando ferramentas simples.
               </ParagraphArea>
             </AreaCard>
 
-            <AreaCard style={{ border: '2px solid #FFBA05' }}>
-              <DivArea>
-                <AreaImage src="/images/datascience.png" alt="datascience" />
-                <TitleArea style={{ color: '#FFBA05' }}>Data Science</TitleArea>
-              </DivArea>
+            <AreaCard>
+                <TitleArea>Introdução a Programação</TitleArea>
               <ParagraphArea>
-                Mergulhe no mundo dos dados, utilizando Python, R e ferramentas de análise para insights valiosos.
+              Explore os conceitos fundamentais da programação e desenvolva suas primeiras páginas web.
               </ParagraphArea>
             </AreaCard>
 
-            <AreaCard style={{ border: '2px solid #68CCF9' }}>
-              <DivArea>
-                <AreaImage src="/images/inteligenciaartificial.png" alt="IA" />
-                <TitleArea style={{ color: '#68CCF9' }}>Inteligência Artificial</TitleArea>
-              </DivArea>
+            <AreaCard>
+                <TitleArea>Empreendedorismo Digital</TitleArea>
               <ParagraphArea>
-                Explore os conceitos e técnicas de IA, incluindo aprendizado de máquina e redes neurais.
+              Descubra como criar seu próprio negócio digital e atrair clientes pela internet.
               </ParagraphArea>
             </AreaCard>
+
+            <AreaCard>
+                <TitleArea>Seguramça Digital e Privacidade</TitleArea>
+              <ParagraphArea>
+              Aprenda como proteger seus dados e dispositivos contra golpes e ataques cibernéticos.
+              </ParagraphArea>
+            </AreaCard>
+
+            <AreaCard>
+                <TitleArea>Trabalho Remoto e Colaboração Online</TitleArea>
+              <ParagraphArea>
+              Descubra ferramentas e práticas para colaborar de forma produtiva no ambiente digital.
+              </ParagraphArea>
+            </AreaCard>
+
           </AreaGrid>
         </Container>
       </AreasSection>
-
+      
       <FAQSection>
         <Accordion id="accordion-collapse" data-accordion="collapse">
           <Title>Perguntas Frequentes</Title>

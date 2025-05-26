@@ -58,8 +58,7 @@ const Navbar = () => {
   return (
     <NavbarContainer ref={navbarRef}>
       <Logo>
-        <img src="/images/education.png" alt="Logo Cunhantã" />
-        <h1>Cunhantã++</h1>
+        <img src="/images/CUNHANTA.png" alt="Logo Cunhantã" />
       </Logo>
       <HamburgerIcon onClick={() => setIsMenuOpen(!isMenuOpen)}>
         <span></span>
@@ -75,7 +74,7 @@ const Navbar = () => {
           </NavItem>
           <NavItem onClick={handleNavItemClick}>
             <NavLink to="/categories" className={({ isActive }) => (isActive ? "active" : "")}>
-              Categorias
+              Cursos
             </NavLink>
           </NavItem>
           <NavItem onClick={handleNavItemClick}>

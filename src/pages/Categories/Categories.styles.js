@@ -18,6 +18,26 @@ export const CategoriesContainer = styled.div`
   }
 `;
 
+export const Header = styled.header`
+text-align: center;
+margin-bottom: 50px;
+background-color: #fff;
+
+h1 {
+    font-size: 2.1rem;
+     font-weight: bold;
+     color: #353635;
+    margin-bottom: 10px;
+   }
+
+   p {
+    font-size: 1.2rem;
+    color: #353635;
+    max-width: 800px;
+   margin: 0 auto;
+  }
+ `;
+
 export const DivSearchVideo = styled.div`
 display: flex;
 justify-content: space-between;
@@ -73,14 +93,14 @@ export const FilterButton = styled.button`
   padding: 0.6rem 1rem;
   margin-right: 0.7rem;
   margin-bottom: 10px;
-  background-color: ${(props) => (props.active ? "#4E1B5A" : "#7D3E8E")};
+  background-color: ${(props) => (props.active ? "#E61D3F" : "#E61D3F")};
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 
   &:hover {
-    background-color: ${(props) => (props.active ? "#4E1B5A" : "#4E1B5A")};
+    background-color: ${(props) => (props.active ? "#E61D3F" : "#E61D3F")};
   }
 `;
 
@@ -112,24 +132,27 @@ export const SectionTitle = styled.h2`
 `;
 
 export const Div = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.3rem;
-
+   display: grid;
+ gap: 30px;
+ width: 100%;
   @media (max-width: 768px) {
     gap: 1.2rem;
   }
 `;
 
 export const CategoryCard = styled.div`
-  display: grid;
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  text-align: center;
-  width: 18rem;
-  border: 1px solid #cdcdcd;
+
+background-color: #fff;
+border-radius: 8px;
+ box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+ cursor: pointer;
+
+ &:hover {
+   transform: translateY(-10px);
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
 
   @media (max-width: 1024px) {
     width: 16rem;
@@ -150,95 +173,42 @@ export const CategoryCard = styled.div`
   }
 `;
 
-export const CategoryImage = styled.img`
-  width: 55%;
-  border-radius: 4px;
-  margin: auto;
-  margin-bottom: 1rem;
-
-  @media (max-width: 480px) {
-    font-size: 0.875rem;
-    width: 52%;
-    margin-bottom: 1.8rem;
-  }
-`;
+ export const CategoryImage = styled.img`
+  width: 100%;
+   height: 14rem;
+  object-fit: cover;
+  border-bottom: 4px solid #E61D3F;
+ `;
 
 export const CategoryTitle = styled.h3`
+   font-size: 1.5rem;
+  font-weight: 600;
+   color: #2a2d34;
+   margin: 15px 20px;
+ `;
+
+ export const CategoryDescription = styled.p`
   font-size: 1rem;
-  color: #353635;
-  margin-bottom: 1rem;
-  font-weight: bold;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
+   color: #666;
+   margin: 0 20px 20px;
+ `;
 
-  @media (max-width: 768px) {
-    font-size: 0.875rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1.1rem;
-    margin-bottom: 0.4rem;
-  }
-
-  @media (max-width: 360px) {
-    font-size: 1rem;
-    margin-bottom: 0.6rem;
-  }
-`;
-
-export const CategoryDescription = styled.p`
-  color: #353635;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  text-align: justify;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-bottom: 1.125rem;
-
-  @media (max-width: 768px) {
-    font-size: 0.75rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1rem;
-  }
-
-  @media (max-width: 360px) {
-    font-size: 0.9rem;
-  }
-`;
-
-export const VideoLink = styled.a`
-  display: inline-block;
-  margin-top: auto;
-  padding: 0.625rem 1.25rem;
-  background-color: #4f1c59;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 0.875rem;
+   export const CategoryButton = styled.button`
+background-color: #E61D3F;
+   color: #fff;
+  padding: 12px 25px;
+  font-size: 1rem;
+   font-weight: bold;
+   border: none;
+  border-radius: 30px;
+   margin: 0 20px 20px;
+  cursor: pointer;
+   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #5b2668;
-    text-decoration: none;
+    background-color: #E61D3F;
   }
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
-
-  @media (max-width: 360px) {
-    font-size: 0.9rem;
-  }
-`;
+ `;
 
 export const NoItemsMessage = styled.div`
   font-size: 16px;
@@ -254,3 +224,93 @@ export const NoItemsMessage = styled.div`
     font-size: 12px;
   }
 `;
+
+// import styled from "styled-components";
+
+// export const CoursesContainer = styled.div`
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   padding: 60px 20px;
+//   background-color: #fff;
+//   max-width: 1200px;
+//   margin: 0 auto;
+// `;
+
+// export const Header = styled.header`
+//   text-align: center;
+//   margin-bottom: 50px;
+//   background-color: #fff;
+
+//   h1 {
+//     font-size: 3rem;
+//     font-weight: bold;
+//     color: #ff8c00;
+//     margin-bottom: 10px;
+//   }
+
+//   p {
+//     font-size: 1.2rem;
+//     color: #353635;
+//     max-width: 800px;
+//     margin: 0 auto;
+//   }
+// `;
+
+// export const CoursesGrid = styled.div`
+//   display: grid;
+//   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+//   gap: 30px;
+//   width: 100%;
+// `;
+
+// export const CourseCard = styled.div`
+//   background-color: #fff;
+//   border-radius: 8px;
+//   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+//   overflow: hidden;
+//   transition: transform 0.3s ease, box-shadow 0.3s ease;
+//   cursor: pointer;
+
+//   &:hover {
+//     transform: translateY(-10px);
+//     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+//   }
+// `;
+
+// export const CourseImage = styled.img`
+//   width: 100%;
+//   height: 200px;
+//   object-fit: cover;
+//   border-bottom: 4px solid #ff8c00;
+// `;
+
+// export const CourseTitle = styled.h3`
+//   font-size: 1.5rem;
+//   font-weight: 600;
+//   color: #2a2d34;
+//   margin: 15px 20px;
+// `;
+
+// export const CourseDescription = styled.p`
+//   font-size: 1rem;
+//   color: #666;
+//   margin: 0 20px 20px;
+// `;
+
+// export const CourseButton = styled.button`
+//   background-color: #ff8c00;
+//   color: #fff;
+//   padding: 12px 25px;
+//   font-size: 1rem;
+//   font-weight: bold;
+//   border: none;
+//   border-radius: 30px;
+//   margin: 0 20px 20px;
+//   cursor: pointer;
+//   transition: background-color 0.3s ease;
+
+//   &:hover {
+//     background-color: #ffd700;
+//   }
+// `;

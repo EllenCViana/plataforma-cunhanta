@@ -39,7 +39,7 @@ export const Logo = styled.div`
   h1 {
     font-size: 1.4rem;
     font-weight: 100;
-    color: #4f1c59;
+    color: #E61D3F;
     margin: 0;
 
     @media (max-width: 1024px) {
@@ -143,7 +143,7 @@ export const NavItem = styled.li`
       display: block;
       width: 0;
       height: 0.1875rem;
-      background-color: #4f1c59;
+      background-color: #E61D3F;
       transition: width 0.3s ease-in-out;
       margin: auto;
       margin-top: 0.25rem;
@@ -151,13 +151,13 @@ export const NavItem = styled.li`
 
     &:hover::after {
       width: 100%;
-      background-color: #5b2668;
+      background-color: #E61D3F;
     }
   }
 
   .active::after {
     width: 100%;
-    background-color: #5b2668;
+    background-color: #E61D3F;
   }
 
   @media (max-width: 1024px) {
@@ -174,9 +174,9 @@ export const NavItem = styled.li`
 `;
 
 export const Button = styled.button`
-  background: ${(props) => (props.className === "btn" ? "#fff" : "#4f1c59")};
-  border: 0.0625rem solid ${(props) => (props.className === "btn" ? "#4f1c59" : "transparent")};
-  color: ${(props) => (props.className === "btn" ? "#4f1c59" : "#fff")};
+  background: ${(props) => (props.className === "btn" ? "#fff" : "#E61D3F")};
+  border: 0.0625rem solid ${(props) => (props.className === "btn" ? "#E61D3F" : "transparent")};
+  color: ${(props) => (props.className === "btn" ? "#E61D3F" : "#fff")};
   padding: 0.625rem 1rem;
   font-size: 0.875rem;
   border-radius: 0.3125rem;
@@ -185,7 +185,7 @@ export const Button = styled.button`
   text-align: center;
 
   &:hover {
-    background-color: ${(props) => (props.className === "btn" ? "#f8f8f8" : "#5b2668")};
+    background-color: ${(props) => (props.className === "btn" ? "#f8f8f8" : "#E61D3F")};
   }
 
   @media (max-width: 1024px) {

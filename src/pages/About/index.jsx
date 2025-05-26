@@ -1,7 +1,5 @@
 import {
-  HeroSection,
-  HeroTitle,
-  HeroParagraph,
+  Header,
   MissionSection,
   SectionTitle,
   Grid,
@@ -18,21 +16,18 @@ import {
 function About() {
   return (
     <>
-      <HeroSection>
-        <div className="container">
-          <HeroTitle>Conheça o Cunhantã++</HeroTitle>
-          <HeroParagraph>
-            Uma plataforma de e-learning criada para transformar a educação
-            quilombola, conectando tradição e inovação.
-          </HeroParagraph>
-        </div>
-      </HeroSection>
+      <Header>
+          <h1>Sobre o Projeto</h1>
+          <p>
+          Somos uma plataforma dedicada a oferecer educação acessível e gratuita para comunidades quilombolas, com o objetivo de preservar suas tradições e impulsionar o aprendizado coletivo.
+          </p>
+      </Header>
 
       <MissionSection>
         <div className="container">
           <SectionTitle>Missão, Visão e Valores</SectionTitle>
           <Grid>
-            <Card  style={{ border: '1px solid #cdcdcd' }}>
+            <Card>
             <Image src="/images/mission.png" alt="mission" />
               <h3>Missão</h3>
               <p>
@@ -41,7 +36,7 @@ function About() {
                 aprendizado coletivo.
               </p>
             </Card>
-            <Card  style={{ border: '1px solid #cdcdcd' }}>
+            <Card>
             <Image src="/images/vision.png" alt="vision" />
               <h3>Visão</h3>
               <p>
@@ -49,7 +44,7 @@ function About() {
                 reconhecida pela qualidade e impacto positivo nas comunidades.
               </p>
             </Card>
-            <Card  style={{ border: '1px solid #cdcdcd' }}>
+            <Card>
             <Image src="/images/values.png" alt="values" />
               <h3>Valores</h3>
               <ul>
@@ -67,7 +62,7 @@ function About() {
         <div className="container">
           <SectionTitle>Por Que Escolher o Cunhantã++?</SectionTitle>
           <Grid>
-            <HighlightCard style={{ border: '2px solid #7B71FF', boxShadow: '0 0.25rem 0.75rem rgba(122, 113, 255, 0.4)' }}>
+            <HighlightCard>
               <Image src="/images/webinar.png" alt="acessibilidade" />
               <h3>Acessibilidade</h3>
               <p>
@@ -75,7 +70,7 @@ function About() {
                 à internet.
               </p>
             </HighlightCard>
-            <HighlightCard style={{ border: '2px solid #68CCF9', boxShadow: '0 0.25rem 0.75rem rgba(104, 203, 249, 0.4)' }}>
+            <HighlightCard>
               <Image src="/images/connection.png" alt="conexao comunitaria" />
               <h3>Conexão Comunitária</h3>
               <p>
@@ -83,7 +78,7 @@ function About() {
                 foco em suas necessidades.
               </p>
             </HighlightCard>
-            <HighlightCard style={{ border: '2px solid #DC6EBE', boxShadow: '0 0.25rem 0.75rem rgba(220, 110, 191, 0.4)' }}>
+            <HighlightCard>
               <Image src="/images/futuro-digital.png" alt="tradicao e inovacao" />
               <h3>Tradição e Inovação</h3>
               <p>

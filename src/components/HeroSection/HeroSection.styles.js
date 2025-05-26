@@ -2,16 +2,16 @@ import styled from "styled-components";
 
 export const HeroHome = styled.section`
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 34rem;
+  height: 38rem;
   background: 
     linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8)),
-    url('/images/hero2.jpg');
+    url('/images/hero.jpg');
   background-size: cover;
   background-position: center;
-  margin-top: 5rem;
-  padding: 0 1rem;
+margin-top: 5rem;
 
   @media (max-width: 768px) {
     height: 28rem;
@@ -32,14 +32,11 @@ export const HeroHome = styled.section`
   }
 `;
 
-export const HeroText = styled.div`
-  color: #ffffff;
 
-  h1 {
+export const HeroTitle = styled.h1`
     font-size: 2.5rem;
     font-weight: bold;
     color: #fff;
-    margin-bottom: 1rem;
 
     @media (max-width: 1024px) {
       font-size: 2rem;
@@ -59,13 +56,14 @@ export const HeroText = styled.div`
       margin-bottom: 0.4rem;
       margin-top: 1rem;
     }
-  }
+  `
 
-  p {
+  export const HeroCaption = styled.p`
     font-size: 1.2rem;
     margin: 0.6rem 0 2.2rem 0;
-    max-width: 41.25rem;
-    line-height: 1.5;
+    color: #fff;
+
+   
 
     @media (max-width: 1024px) {
       font-size: 1rem;
@@ -87,24 +85,26 @@ export const HeroText = styled.div`
       max-width: 100%;
       margin: 0;
     }
-  }
-`;
+  `;
 
 export const HeroButton = styled.a`
-  background: #4F1C59;
+  background: #E61D3F;
   color: #fff;
-  padding: 0.875rem 1.5rem;
-  font-size: 1.125rem;
+  width: 14rem;
+  height: 3rem;
+  font-size: 1.3rem;
   text-decoration: none;
-  border-radius: 5px;
-  display: inline-block;
+  border-radius: 6px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: pulse 3s infinite;
 
   &:hover {
-    background: #5B2668;
-    transform: scale(1.05);
+    background: #E61D3F;
+    text-decoration: none;
   }
 
   @media (max-width: 1024px) {
@@ -126,5 +126,24 @@ export const HeroButton = styled.a`
     font-size: 0.75rem;
     padding: 0.5rem 0.8rem;
     margin-top: 0.6rem;
+  }
+
+  
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+`;
+
+export const HeroImage = styled.img`
+  width: 50px;
+  height: 50px;
+  object-fit: contain; 
+  border-radius: 50%;
+
+  &.inverted {
+    transform: scaleX(-1); /* Inverter a imagem horizontalmente */
   }
 `;

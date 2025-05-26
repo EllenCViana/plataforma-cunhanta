@@ -39,7 +39,7 @@ export const Input = styled.input`
   border-radius: 0.25rem;
   font-size: 1rem;
   &:focus {
-    border-color: #5B2668;
+    border-color: #E61D3F;
     outline: none;
     box-shadow: 0 0 0 0.1875rem rgba(0, 123, 255, 0.25);
   }
@@ -48,14 +48,14 @@ export const Input = styled.input`
 export const Button = styled.button`
   width: 100%;
   padding: 0.8rem;
-  background-color: #4F1C59;
+  background-color: #E61D3F;
   color: #ffffff;
   border: none;
   border-radius: 0.25rem;
   font-size: 1rem;
   cursor: pointer;
   &:hover {
-    background-color: #5B2668;
+    background-color: #E61D3F;
   }
 `;
 
@@ -68,7 +68,7 @@ export const ErrorMessage = styled.p`
 `;
 
 export const LinkButton = styled(Link)`
-  color: #4F1C59;
+  color: #E61D3F;
   font-size: 0.875rem;
   margin-top: 1rem;
   font-weight: bold;

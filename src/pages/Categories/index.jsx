@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   CategoriesContainer,
+  Header,
   SearchInput,
   SelectContainer,
   FilterContainer,
@@ -12,7 +13,6 @@ import {
   CategoryImage,
   CategoryTitle,
   CategoryDescription,
-  VideoLink,
   Div,
   NoItemsMessage,
   DivSearchVideo
@@ -79,98 +79,97 @@ function Categories() {
 
   return (
     <CategoriesContainer>
-          <DivSearchVideo>
-            <SearchInput
-              type="text"
-              placeholder="Pesquise por um curso..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-            />
-                    <SelectContainer>
-            <select onChange={handleCategoryChange} value={selectedCategory}>
-              <option value="">Todas as Categorias</option>
-              {categories.map((category) => (
-                <option key={category.title} value={category.title}>
-                  {category.title}
-                </option>
-              ))}
-            </select>
-                    </SelectContainer>
-          </DivSearchVideo>
+      <Header>
+        <h1>Explore Nossos Cursos Online</h1>
+        <p>Aprenda, preserve e compartilhe as tradições quilombolas com o uso da tecnologia.</p>
+      </Header>
+      <DivSearchVideo>
+        <SearchInput
+          type="text"
+          placeholder="Pesquise por um curso..."
+          value={searchTerm}
+          onChange={(e) => setSearchTerm(e.target.value)}
+        />
+        <SelectContainer>
+          <select onChange={handleCategoryChange} value={selectedCategory}>
+            <option value="">Todas as Categorias</option>
+            {categories.map((category) => (
+              <option key={category.title} value={category.title}>
+                {category.title}
+              </option>
+            ))}
+          </select>
+        </SelectContainer>
+      </DivSearchVideo>
 
-        {selectedCategory && (
-          <FilterContainer>
-            <h4>Filtros:</h4>
-            <FilterButton
-              active={selectedFilter === "Todos"}
-              onClick={() => handleFilterChange("Todos")}
-            >
-              Todos
-            </FilterButton>
+      {selectedCategory && (
+        <FilterContainer>
+          <h4>Filtros:</h4>
+          <FilterButton
+            active={selectedFilter === "Todos"}
+            onClick={() => handleFilterChange("Todos")}
+          >
+            Todos
+          </FilterButton>
 
-            {selectedCategory === "Desenvolvimento Web Front-End" && (
-              <>
-                <FilterButton
-                  active={selectedFilter === "Html5/Css3"}
-                  onClick={() => handleFilterChange("Html5/Css3")}
-                >
-                  Html5/Css3
-                </FilterButton>
+          {selectedCategory === "Desenvolvimento Web Front-End" && (
+            <>
+              <FilterButton
+                active={selectedFilter === "Html5/Css3"}
+                onClick={() => handleFilterChange("Html5/Css3")}
+              >
+                Html5/Css3
+              </FilterButton>
 
-                <FilterButton
-                  active={selectedFilter === "Javascript/Typescript"}
-                  onClick={() => handleFilterChange("Javascript/Typescript")}
-                >
-                  Javascript/Typescript
-                </FilterButton>
-              </>
-            )}
+              <FilterButton
+                active={selectedFilter === "Javascript/Typescript"}
+                onClick={() => handleFilterChange("Javascript/Typescript")}
+              >
+                Javascript/Typescript
+              </FilterButton>
+            </>
+          )}
 
-            {selectedCategory === "Informática" && (
-              <>
-                <FilterButton
-                  active={selectedFilter === "Básica"}
-                  onClick={() => handleFilterChange("Básica")}
-                >
-                  Básica
-                </FilterButton>
+          {selectedCategory === "Informática" && (
+            <>
+              <FilterButton
+                active={selectedFilter === "Básica"}
+                onClick={() => handleFilterChange("Básica")}
+              >
+                Básica
+              </FilterButton>
 
-                <FilterButton
-                  active={selectedFilter === "Avançada"}
-                  onClick={() => handleFilterChange("Avançada")}
-                >
-                  Avançada
-                </FilterButton>
-              </>
-            )}
-          </FilterContainer>
-        )}
+              <FilterButton
+                active={selectedFilter === "Avançada"}
+                onClick={() => handleFilterChange("Avançada")}
+              >
+                Avançada
+              </FilterButton>
+            </>
+          )}
+        </FilterContainer>
+      )}
 
-        <Section>
-          {selectedCategory && <SectionTitle>{selectedCategory}</SectionTitle>}
-          <Div>
-            {filteredSearchItems.length > 0 ? (
-              filteredSearchItems.map((item, index) => (
-                <CategoryCard key={index}>
-                  <CategoryImage
-                    src={`/images${item.image}`}
-                    alt={item.title}
-                  />
-                  <CategoryTitle>{item.title}</CategoryTitle>
-                  <CategoryDescription>{item.description}</CategoryDescription>
-                  <VideoLink
-                    href="#"
-                    onClick={() => handleVideoClick(item.videoUrl)}
-                  >
-                    Iniciar Curso
-                  </VideoLink>
-                </CategoryCard>
-              ))
-            ) : (
-              <NoItemsMessage>Nenhum item encontrado.</NoItemsMessage>
-            )}
-          </Div>
-        </Section>
+      <Section>
+        {selectedCategory && <SectionTitle>{selectedCategory}</SectionTitle>}
+        <Div>
+          {filteredSearchItems.length > 0 ? (
+            filteredSearchItems.map((item, index) => (
+              <CategoryCard key={index} href="#"
+                  onClick={() => handleVideoClick(item.videoUrl)}>
+                <CategoryImage
+                  src={`/images${item.image}`}
+                  alt={item.title}
+                />
+                <CategoryTitle>{item.title}</CategoryTitle>
+                <CategoryDescription>{item.description}</CategoryDescription>
+              </CategoryCard>
+            ))
+          ) : (
+            <NoItemsMessage>Nenhum item encontrado.</NoItemsMessage>
+          )}
+        </Div>
+      </Section>
     </CategoriesContainer>
   );
 }

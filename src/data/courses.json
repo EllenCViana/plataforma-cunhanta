@@ -1,0 +1,89 @@
+{
+    "categories": [
+      {
+        "title": "Cursos",
+        "description": "",
+        "subcategories": [
+          {
+            "title": "Informática Básica",
+            "description": "Cursos introdutórios de Informática Básica.",
+            "items": [
+              {
+                "title": "O que é um computador?",
+                "description": "Conheça alguns conceitos fundamentais da computação.",
+                "duration": "5 min",
+                "instrutor": "Eu TI Ensino",
+                "tag": "Básico",
+                "image": "/images/draw.jpeg",
+                "videoUrl": "https://www.youtube.com/watch?v=WULwZ6v_Ai8&list=PLX0VJrazYICBIpZ9l8xi-I19Kmq7Ayecl&index=1"
+              },
+              {
+                "title": "Principais hardwares do computador!",
+                "description": "Conheça os componentes do computador!",
+                "duration": "5 min",
+                "instrutor": "Eu TI Ensino",
+                "tag": "Básico",
+                "image": "/images/draw.jpeg",
+                "videoUrl": "https://www.youtube.com/watch?v=ZSIrMa7JYc8&list=PLX0VJrazYICBIpZ9l8xi-I19Kmq7Ayecl&index=4"
+              },
+              {
+                "title": "O que é um processador?",
+                "description": "você entenderá o que é um processador, suas partes, como ele funciona, e qual a sua função.",
+                "duration": "5 min",
+                "instrutor": "Eu TI Ensino",
+                "tag": "Médio",
+                "image": "/images/draw.jpeg",
+                "videoUrl": "https://www.youtube.com/watch?v=GRuTNQlLxrU&list=PLX0VJrazYICBIpZ9l8xi-I19Kmq7Ayecl&index=5"
+              },
+              {
+                "title": "Arquitetura de John Von Neumann",
+                "description": "Conheça a arquitetura de Von Neumann.",
+                "duration": "5 min",
+                "instrutor": "Eu TI Ensino",
+                "tag": "Médio",
+                "image": "/images/draw.jpeg",
+                "videoUrl": "https://www.youtube.com/watch?v=tZ5W2LpdcEw&list=PLX0VJrazYICBIpZ9l8xi-I19Kmq7Ayecl&index=2"
+              },
+              {
+                "title": "Tipos de computadores que existem",
+                "description": "Você entenderá um pouco melhor sobre os tipos de computadores que existem!",
+                "duration": "7 min",
+                "instrutor": "Eu TI Ensino",
+                "tag": "Básico",
+                "image": "/images/draw.jpeg",
+                "videoUrl": "https://www.youtube.com/watch?v=G4P4WqhTDfA&list=PLX0VJrazYICBIpZ9l8xi-I19Kmq7Ayecl&index=3"
+              },
+              {
+                "title": "Conheça as diferenças entre CISC e RISC",
+                "description": "Você entenderá o que é RISC, o que é CISC e suas diferenças.",
+                "duration": "6 min",
+                "instrutor": "Eu TI Ensino",
+                "tag": "Médio",
+                "image": "/images/draw.jpeg",
+                "videoUrl": "https://www.youtube.com/watch?v=dVHD2BKZklc&list=PLX0VJrazYICBIpZ9l8xi-I19Kmq7Ayecl&index=6"
+              },
+              {
+                "title": "O que é um sistema operacional?",
+                "description": "você descobrirá o que é um sistema operacional, além de conhecer alguns exemplos.",
+                "duration": "5 min",
+                "instrutor": "Eu TI Ensino",
+                "tag": "Médio",
+                "image": "/images/draw.jpeg",
+                "videoUrl": "https://www.youtube.com/watch?v=yjfB-asZVF4&list=PLX0VJrazYICBIpZ9l8xi-I19Kmq7Ayecl&index=7"
+              },
+              {
+                "title": "Os tipos de sistemas operacionais",
+                "description": "você aprenderá as diferenças entre os tipos de sistemas operacionais",
+                "duration": "4 min",
+                "instrutor": "Eu TI Ensino",
+                "tag": "Médio",
+                "image": "/images/draw.jpeg",
+                "videoUrl": "https://www.youtube.com/watch?v=44P_feaO1EU&list=PLX0VJrazYICBIpZ9l8xi-I19Kmq7Ayecl&index=8"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+  

@@ -1,47 +1,29 @@
 import styled from "styled-components";
 
-export const HeroSection = styled.section`
-  background: linear-gradient(rgba(0, 0, 0, 0.07), rgba(0, 0, 0, 0.6)),
-    url("/images/hero-sobre.jpg") no-repeat center center/cover;
-  color: #fff;
-  height: 17.5rem;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  margin-top: 5rem;
+export const Header = styled.header`
+text-align: center;
+background-color: #fff;
+margin-top: 5rem;
+padding: 2rem 0;
 
-  @media (max-width: 1024px) {
-      font-size: 2rem;
-    }
+h1 {
+    font-size: 2.1rem;
+     font-weight: bold;
+     color: #353635;
+    margin-bottom: 10px;
+   }
 
-    @media (max-width: 768px) {
-      margin-top: 4rem;
-    }
-
-    @media (max-width: 480px) {
-      margin-top: 2rem;
-    }
-
-  @media (max-width: 360px) {
-    margin-top: 2.5rem;
+   p {
+    font-size: 1.2rem;
+    color: #353635;
+    max-width: 800px;
+   margin: 0 auto;
   }
-`;
+ `;
 
-export const HeroTitle = styled.h1`
-  font-size: 2.2rem;
-  margin-bottom: 0.625rem;
-  color: #fff;
-`;
-
-export const HeroParagraph = styled.p`
-  font-size: 1rem;
-  max-width: 70%;
-  margin: 0 auto;
-`;
 
 export const MissionSection = styled.section`
-  padding: 3.125rem 0;
-  background: #fff;
+  padding: 2rem 0;
   text-align: center;
 `;
 
@@ -61,6 +43,11 @@ export const Card = styled.div`
   border-radius: 8px;
   padding: 1.5rem;
   text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+transition: transform 0.3s ease;
+&:hover {
+transform: translateY(-10px);
+}
 
   h3 {
     margin-bottom: 0.3rem;
@@ -88,6 +75,11 @@ export const HighlightCard = styled(Card)`
   align-items: center; 
   justify-content: center;
   padding: 1.875rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+transition: transform 0.3s ease;
+&:hover {
+transform: translateY(-10px);
+}
   img {
     width: 5rem;
     margin-bottom: 1.25rem;
@@ -131,7 +123,7 @@ export const TeamImage = styled.img`
   width: 9.375rem;
   height: 9.375rem;
   border-radius: 50%;
-  border:  2px solid #96CC3A;
+  border:  2px solid #E61D3F;
   margin-bottom: 1.5rem;
   object-fit: cover;
 
@@ -139,7 +131,4 @@ export const TeamImage = styled.img`
       height: 7rem;
       width: 7rem;
     }
-
 `;
-
-

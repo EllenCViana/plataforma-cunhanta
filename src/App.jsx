@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
+import CourseCardSection from './components/Cursos';
 import { VideoPlayer } from "./pages/VideoPlayer";
 import { StyleSheetManager } from "styled-components";
 import isPropValid from "@emotion/is-prop-valid";
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/cursos" element={<CourseCardSection />} />
         <Route path="/video/:videoId" element={<VideoPlayer />} />
       </Routes>
     </>

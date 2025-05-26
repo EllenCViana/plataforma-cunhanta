@@ -46,7 +46,7 @@ export const BackButton = styled.button`
   text-align: center;
   color: #353635;
   background-color: transparent;
-  width: 4rem;
+  width: 8rem;
   font-size: 1rem;
   text-decoration: none;
 

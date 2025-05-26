@@ -40,14 +40,14 @@ export const Input = styled.input`
 
   &:focus {
     outline: none;
-    border-color: #4f1c59;
+    border-color: #E61D3F;
     box-shadow: 0 0 0 0.2rem rgba(76, 124, 255, 0.25);
   }
 `;
 
 export const Button = styled.button`
   padding: 0.75rem;
-  background: #4f1c59;
+  background: #E61D3F;
   color: #ffffff;
   border: none;
   border-radius: 0.25rem;
@@ -56,11 +56,11 @@ export const Button = styled.button`
   cursor: pointer;
 
   &:hover {
-    background: #5b2668;
+    background: #E61D3F;
   }
 
   &:active {
-    background: #5b2668;
+    background: #E61D3F;
   }
 `;
 
@@ -82,7 +82,7 @@ export const SuccessMessage = styled.div`
 
 export const LinkButton = styled(Link)`
   text-align: center;
-  color: #4f1c59;
+  color: #E61D3F;
   font-size: 0.875rem;
   font-weight: bold;
   text-decoration: none;
